@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"content="width=device-width'initial-scale=1.0">
+        <title>Login page</title>
+        <link rel="stylesheet" href="thamil.css">
+    </head>
+    <body>
+        <div class="login-container">
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password">
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <p id="error-message"></p>
+        </div>
+            <script>
+                const form=document.getElementById('login-form');
+const errormessage=document.getElementById('error-message');
+form.addEventListener('submit',(e) =>{
+    e.preventDefault();
+    const username=document.getElementById('username').Value;
+    const password=document.getElementById('password').Value;
+    if(username === 'Thamil'|| password === 'suganya'){
+        errormessage.textContent = 'Please fill all in all fields.';
+    }
+    else{
+        //Here you would typically send a request to the server to authenticate the user 
+        console.log('Username:${username},Password:${password}');
+        errormessage.textContent='error';
+    }
+});
+            </script>
+
+    </body>
+</html>
